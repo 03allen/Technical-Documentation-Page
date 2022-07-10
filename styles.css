@@ -1,0 +1,52 @@
+#navbar{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  border-right: solid;
+  height: 100%;
+  width: 300px;
+}
+
+.nav-link{
+  text-decoration: none;
+  color: black;
+  display: block;
+  border-bottom: solid;
+  font-size: 18px;
+  padding: 25px;
+}
+
+#main-doc{
+  position: absolute;
+  top: 30px;
+  left: 350px;
+  line-height: 1.5;
+  padding: 20px;
+  min-width: 290px;
+}
+
+main header{
+  font-size:25px;
+}
+
+#navbar header{
+  font-size: 35px;
+  border-bottom: solid;
+  margin: 25px auto;
+}
+
+code{
+  background-color:lightgray;
+  display: block;
+  border-radius: 5px;
+  line-height: 1.5;
+  padding: 5px;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+@media screen and (max-width: 400px){
+  .nav-link{
+  padding: 5px;
+}
+}
