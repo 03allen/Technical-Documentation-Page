@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <nav id="navbar">
+      <header>CSS basics</header>
+      <a class="nav-link" href="#CSS_first_steps_overview">CSS first steps overview</a>
+      <a class="nav-link" href="#What_is_CSS">What is CSS</a>
+      <a class="nav-link" href="#Getting_started_with_CSS">Getting started with CSS</a>
+      <a class="nav-link" href="#How_CSS_is_structured">How CSS is structured</a>
+      <a class="nav-link" href="#How_CSS_works">How CSS works</a>
+     <a class="nav-link" href="#Reference">Reference</a> 
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="CSS_first_steps_overview">
+      <header>CSS first steps overview</header>
+      <article>
+        <p>CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.</p>
+      </article>
+    </section>
+    <section class="main-section" id="What_is_CSS">
+      <header>What is CSS</header>
+      <article>
+        <p>CSS is a rule-based language — you define the rules by specifying groups of styles that should be applied to particular elements or groups of elements on your web page.</p>
+        <p>For example, you can decide to have the main heading on your page to be shown as large red text. The following code shows a very simple CSS rule that would achieve the styling described above:</p>
+        <code>
+          h1 {
+    color: red;
+    font-size: 5em;
+    }
+        </code>
+        <ul>
+          <li>In the above example, the CSS rule opens with a selector . This selects the HTML element that we are going to style. In this case, we are styling level one headings (&lt;h1>).</li>
+          <li>We then have a set of curly braces { }.</li>
+          <li>Inside the braces will be one or more declarations, which take the form of property and value pairs. We specify the property (color in the above example) before the colon, and we specify the value of the property after the colon (red in this example).</li>
+          <li>This example contains two declarations, one for color and the other for font-size. Each pair specifies a property of the element(s) we are selecting (&lt;h1> in this case), then a value that we'd like to give the property.</li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Getting_started_with_CSS">
+      <header>Getting started with CSS</header>
+      <article>
+        <p>The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.</p>
+        <p>Create a file in the same folder as your HTML document and save it as styles.css. The .css extension shows that this is a CSS file.</p>
+        <p>To link styles.css to index.html, add the following line somewhere inside the <head> of the HTML document:</p>
+        <code>
+          &lt;link rel="stylesheet" href="styles.css">
+        </code>
+        <p>This <link> element tells the browser that we have a stylesheet, using the rel attribute, and the location of that stylesheet as the value of the href attribute. You can test that the CSS works by adding a rule to styles.css. Using your code editor, add the following to your CSS file:</p>
+        <code>h1 {
+  color: red;
+}
+</code>
+<p>By making our heading red, we have already demonstrated that we can target and style an HTML element. We do this by targeting an element selector — this is a selector that directly matches an HTML element name. To target all paragraphs in the document, you would use the selector p. To turn all paragraphs green, you would use:
+
+</p>
+<code>
+  p {
+  color: green;
+}
+</code>
+<p>You can target multiple selectors at the same time by separating the selectors with a comma. If you want all paragraphs and all list items to be green, your rule would look like this:</p>
+<code>
+  p, li {
+    color: green;
+}
+</code>
+      </article>
+    </section>
+    <section class="main-section" id="How_CSS_is_structured">
+      <header>How CSS is structured</header>
+      <article>
+        <p>In this article, we have taken a look at a number of ways in which you can style a document using CSS. We will be developing this knowledge as we move through the rest of the lessons. However, you now already know enough to style text, apply CSS based on different ways of targeting elements in the document, and look up properties and values in the MDN documentation.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="How_CSS_works">
+      <header>How CSS works</header>
+      <article>
+        <p>When a browser displays a document, it must combine the document's content with its style information. It processes the document in a number of stages, which we've listed below. Bear in mind that this is a very simplified version of what happens when a browser loads a webpage, and that different browsers will handle the process in different ways. But this is roughly what happens.</p>
+        <ul>
+          <li>The browser loads the HTML (e.g. receives it from the network).</li>
+          <li>It converts the HTML into a DOM (Document Object Model). The DOM represents the document in the computer's memory. The DOM is explained in a bit more detail in the next section.</li>
+          <li>The browser then fetches most of the resources that are linked to by the HTML document, such as embedded images and videos ... and linked CSS! JavaScript is handled a bit later on in the process, and we won't talk about it here to keep things simpler.</li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article>
+        <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps">MDN<a></p>
+      </article>
+    </section>
+  </main>
+</html>
